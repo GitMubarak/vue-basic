@@ -2,12 +2,23 @@
     <head>
         <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
     </head>
-
+    <style>
+    span {
+        display: block;
+    }
+    </style>
     <body>
 
-        <div id="our-app">
-            Name: {{ fname }} <br>
-            Channel: {{ channel }}
+        <div id="my-app">
+            <!-- Showing Data -->
+            <span>First Name: {{ fname }}</span>
+            <span>Last Name: {{ lname }}</span>
+            <!-- Using Function -->
+            <span>Full Name: {{ getFullName() }}</span>
+            <!-- Function with parameter -->
+            <span>Age: {{ getAge(35) }}</span>
+            <!-- Methods with data binding -->
+            <span>Title: {{ getTitle() }}</span>
         </div>
 
         <script src="app.js"></script>

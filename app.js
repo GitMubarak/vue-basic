@@ -1,8 +1,20 @@
 var myview = new Vue({
-    el: "#our-app",
+    el: "#my-app",
     data:{
-        message: "This is our new code",
+        message: "Welcome to VueJs",
         fname: "Hossni",
-        channel: "Online web tutor"
+        lname: "Mubarak",
+        title: "Web Application Developer"
+    },
+    methods:{
+        getFullName: function() {
+            return "I am Hossni Mubarak.";
+        },
+        getAge: function(age) {
+            return "I am " + age + " years of age.";
+        },
+        getTitle: function(){
+            return "I am a " + this.title;
+        }
     }
 });
