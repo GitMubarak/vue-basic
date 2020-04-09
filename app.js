@@ -1,10 +1,14 @@
 var myview = new Vue({
     el: "#my-app",
     data:{
-        message: "Welcome to VueJs",
-        fname: "Hossni",
-        lname: "Mubarak",
-        title: "Web Application Developer"
+        fullName: "Hossni Mubarak",
+        title: "Web Application Developer",
+        webUrl: "http://hossnimubarak.com",
+        imgUrl: "hossni-mubarak.jpg",
+        isActive: true,
+        htmlContentBinding: "<span>Bangladesh is a small country. But she has a large population</span>",
+        txtUserName: "User Name",
+        txtUserEmail: "abc@abc.com",
     },
     methods:{
         getFullName: function() {
