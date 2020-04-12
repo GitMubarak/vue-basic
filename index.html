@@ -14,25 +14,14 @@
     <body>
 
         <div id="my-app">
-            <lable>1. HTML attributes binding:</lable>
-            Url: <a v-bind:href="webUrl" :title="title">{{ fullName }}</a>
-            <br><br>
-            
-            <lable>2. HTML class binding:</lable>
-            Image: <br>
-            <img :src="imgUrl" :class="{imgClass:isActive}">
-            <br><br>
-            
-            <lable>3. HTML content binding:</lable>
-            <div v-html="htmlContentBinding"></div>
-            <br>
-            
-            <lable>4. Form inputs binding:</lable>
-            <form method="POST">
-                <input type="text" :value="txtUserName" :placeholder="txtUserName">
-                <input type="text" :value="txtUserEmail" :placeholder="txtUserEmail">
-                <input type="submit" value="Submit">
-            </form>
+
+            <h3>Counter: {{ counter }}</h3>
+
+            <input type="button" v-on:click="increment(1)" value="Increment By 1">
+            <input type="button" v-on:click="decrement(1)" value="Decrement By 1">
+            <input type="button" v-on:dblclick="increment(5)" value="Increment By 5">
+            <input type="button" v-on:dblclick="decrement(5)" value="Decrement By 5">
+
         </div>
 
         <script src="app.js"></script>
