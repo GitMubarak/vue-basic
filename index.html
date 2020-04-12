@@ -17,10 +17,16 @@
 
             <h3>Counter: {{ counter }}</h3>
 
-            <input type="button" v-on:click="increment(1)" value="Increment By 1">
-            <input type="button" v-on:click="decrement(1)" value="Decrement By 1">
+            <input type="button" @click="increment(1)" value="Increment By 1">
+            <input type="button" @click="decrement(1)" value="Decrement By 1">
             <input type="button" v-on:dblclick="increment(5)" value="Increment By 5">
             <input type="button" v-on:dblclick="decrement(5)" value="Decrement By 5">
+
+            <div class="move-area" @mousemove="movefunction" style="height: 200px; width:200px; border:1px solid red; margin-top:10px;">
+                <span>{{ x }}, {{ y }}</span>
+            </div>
+
+            <input type="button" @mouseover="overfunction" @mouseout="outfunction" :value="mouse">
 
         </div>
 
